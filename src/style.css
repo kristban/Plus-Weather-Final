@@ -1,0 +1,43 @@
+body {
+  background: #add2c9;
+  font-family: "Parkinsans", serif;
+}
+
+.overall {
+  background: #488b8f;
+  display: block;
+  margin: 5% auto;
+  padding: 30px 30px;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.what-city {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 5px;
+}
+#search-field {
+  width: 74%;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border-style: none;
+  background: #add2c9;
+}
+
+#submit-field {
+  width: 24%;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border-style: none;
+  background: #add2c9;
+}
+
+#temperature-today {
+    font-size: 48px;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: -80px
+}

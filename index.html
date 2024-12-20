@@ -3,23 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
     <title>Wetter-Vorschau</title>
   </head>
+  <div class="overall">
   <header>
+    
     <form>
-      <input type="search" placeholder="Enter your city" required />
-      <input type="submit" value="Search" />
+      <input type="search" id="search-field" placeholder="Enter your city" required />
+      <input type="submit" id="submit-field" value="Search" />
+      <link rel="stylesheet" href="src/style.css" />
     </form>
   </header>
   <body>
-    <div>
+    
       <h1>Cork</h1>
       <p>
         Tuesday 20:09, broken clouds
         <br />Humidity: 95%, Wind: 4.63km/h
       </p>
-    </div>
-    <div>🌤️ 12 °C</div>
+    
+    <div id="temperature-today">🌤️ 12 °C</div>
     <footer>
       This project was coded by
       <a href="https://github.com/kristban" target="_blank">Kristin Bannasch</a>
@@ -29,8 +35,8 @@
       >
       and is hosted on
       <a href="https://plus-weather-final.netlify.app/" target="_blank"
-        >Netlify</a
-      >
+        >Netlify</a>
     </footer>
+    </div>
   </body>
 </html>
