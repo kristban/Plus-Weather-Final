@@ -2,6 +2,9 @@ body {
   background: #add2c9;
   font-family: "Parkinsans", serif;
 }
+footer {
+  font-size: 12px;
+}
 
 .overall {
   background: #488b8f;
@@ -9,7 +12,7 @@ body {
   margin: 5% auto;
   padding: 30px 30px;
   max-width: 500px;
-  border-radius: 15px;
+  border-radius: 12px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -17,6 +20,11 @@ body {
   display: block;
   margin: 0 auto;
   padding: 10px 5px;
+}
+
+#today-unit {
+  font-size: 28px;
+  margin-top: 6px;
 }
 #search-field {
   width: 74%;
@@ -43,8 +51,9 @@ body {
 }
 
 #humidity {
-    color: orange;
+  color: orange;
 }
 
 #wind {
-color: orange;}
+  color: orange;
+}

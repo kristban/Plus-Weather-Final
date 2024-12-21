@@ -1,3 +1,13 @@
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-field");
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = searchInput.value;
+}
+
+let searchFieldElement = document.querySelector("#search-form");
+searchFieldElement.addEventListener("submit", handleSearchSubmit);
+
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
@@ -22,7 +32,7 @@ function formatDate(date) {
     minutes = `0${hours}`;
   }
 
-  return `${formattedDay} ${hours}:${minutes}`
+  return `${formattedDay} ${hours}:${minutes}`;
 }
 
 let currentDateElement = document.querySelector("#currentDate");

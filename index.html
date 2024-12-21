@@ -3,39 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
     <title>Wetter-Vorschau</title>
   </head>
-  <div class="overall">
-  <header>
-    <form>
-      <input type="search" id="search-field" placeholder="Enter your city" required />
-      <input type="submit" id="submit-field" value="Search" />
-      <link rel="stylesheet" href="src/style.css" />
-    </form>
-  </header>
   <body>
-      <h1>Cork</h1>
-      <p>
-        <span id="currentDate">Tuesday 20:09</span>, broken clouds
-        <br />Humidity: <span id="humidity">95%</span>, Wind: <span id="wind">4.63km/h</span>
-      </p>
-    
-    <div id="temperature-today"> 🌤️ 12 °C</div>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/kristban" target="_blank">Kristin Bannasch</a>
-      is 
-      <a href="https://github.com/kristban/Plus-Weather-Final" target="_blank"
-        >open-sourced on GitHub</a>
-      and is hosted on
-      <a href="https://plus-weather-final.netlify.app/" target="_blank"
-        >Netlify</a>
-    </footer>
+    <div class="overall">
+      <header>
+        <form id="search-form">
+          <input
+            type="search"
+            id="search-field"
+            placeholder="Enter your city"
+            required
+          />
+          <input type="submit" id="submit-field" value="Search" />
+          <link rel="stylesheet" href="src/style.css" />
+        </form>
+      </header>
+      <main>
+        <h1 id="city">Cork</h1>
+        <p>
+          <span id="currentDate">Tuesday 20:09</span>, broken clouds
+          <br />Humidity: <span id="humidity">95%</span>, Wind:
+          <span id="wind">4.63km/h</span>
+        </p>
+        <div id="temperature-today">
+          <span id="today-symbol">🌤️</span>
+          <span id="today-temperature">12</span> <span id="today-unit">°C</span>
+        </div>
+      </main>
+
+      <footer>
+        This project was coded by
+        <a href="https://github.com/kristban" target="_blank"
+          >Kristin Bannasch</a
+        >
+        is
+        <a href="https://github.com/kristban/Plus-Weather-Final" target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and is hosted on
+        <a href="https://plus-weather-final.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
     </div>
     <script src="src/index.js"></script>
-    
   </body>
 </html>
