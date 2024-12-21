@@ -2,16 +2,20 @@ body {
   background: #add2c9;
   font-family: "Parkinsans", serif;
 }
+main {
+  
+    padding: 30px 0;
+}
 footer {
   font-size: 12px;
 }
 
 .overall {
   background: #488b8f;
-  display: block;
-  margin: 5% auto;
-  padding: 30px 30px;
-  max-width: 500px;
+  
+  margin: 45px auto;
+  padding: 30px;
+  max-width: 600px;
   border-radius: 12px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -22,10 +26,6 @@ footer {
   padding: 10px 5px;
 }
 
-#today-unit {
-  font-size: 28px;
-  margin-top: 6px;
-}
 #search-field {
   width: 74%;
   padding: 10px 10px;
@@ -43,13 +43,27 @@ footer {
 }
 
 #temperature-today {
-  font-size: 48px;
   display: flex;
   justify-content: end;
   position: relative;
-  top: -80px;
+  top: -100px;
 }
 
+.weather-app-icon {
+  width: 90px;
+  height: 90px;
+  
+}
+#today-temperature {
+  font-size: 90px;
+  margin-left: 10px;
+  line-height: 90px;
+  font-weight: bold;
+}
+#today-unit {
+  font-size: 28px;
+  margin-top: 15px;
+}
 #humidity {
   color: orange;
 }
