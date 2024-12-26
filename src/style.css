@@ -3,18 +3,15 @@ body {
   font-family: "Parkinsans", serif;
 }
 main {
-  
-    padding: 30px 0;
-    
-  
+  padding: 30px 0;
 }
-footer {
-  font-size: 12px;
+.weather-app-data {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .overall {
   background: #488b8f;
-  
   margin: 45px auto;
   padding: 30px;
   max-width: 600px;
@@ -46,15 +43,14 @@ footer {
 
 #temperature-today {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
-  top: -100px;
+  top: 30px;
 }
 
 .weather-app-icon {
   width: 90px;
   height: 90px;
-  
 }
 #today-temperature {
   font-size: 90px;
@@ -72,4 +68,7 @@ footer {
 
 #wind {
   color: orange;
+}
+footer {
+  font-size: 12px;
 }
