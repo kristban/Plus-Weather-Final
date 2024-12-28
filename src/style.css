@@ -83,20 +83,20 @@ main {
 }
 
 .weather-forecast-icon {
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 10px;
+  width: 76px;
+  height: 76px;
+  display: block;
+  margin: 0 auto;
 }
 
 .weather-forecast-temperatures {
+  margin-top: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
-.weather-forecast-temperature {
-  padding: 0 10px;
-}
+
 
 footer {
   font-size: 12px;
