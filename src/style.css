@@ -2,13 +2,6 @@ body {
   background: #add2c9;
   font-family: "Parkinsans", serif;
 }
-main {
-  padding: 30px 0;
-}
-.weather-app-data {
-  display: flex;
-  justify-content: flex-start;
-}
 
 .overall {
   background: #488b8f;
@@ -19,49 +12,56 @@ main {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.weather-forecast {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 40px;
-}
-
 #search-field {
   width: 74%;
   padding: 10px 10px;
   border-radius: 10px;
   border-style: none;
   background: #add2c9;
+  
+}
+
+::placeholder {
+  color: #488b8f;
 }
 
 #submit-field {
   width: 24%;
+  color: #488b8f;
   padding: 10px 10px;
   border-radius: 10px;
   border-style: none;
   background: #add2c9;
 }
 
-#temperature-today {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  top: 30px;
+main {
+  padding: 30px 0;
 }
 
-.weather-app-icon {
+#temperature-today {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  top: -100px;
+}
+
+#icon {
   width: 90px;
   height: 90px;
 }
+
 #today-temperature {
   font-size: 90px;
   margin-left: 10px;
   line-height: 90px;
   font-weight: bold;
 }
+
 #today-unit {
   font-size: 28px;
   margin-top: 15px;
 }
+
 #humidity {
   color: orange;
 }
@@ -69,6 +69,35 @@ main {
 #wind {
   color: orange;
 }
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-temperatures {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
+
 footer {
   font-size: 12px;
 }
