@@ -18,6 +18,8 @@ function updateWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -60,8 +62,18 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+
+function getForecast(city) {
+ let apiKey = "7a9df9a4f940btc116d43db796o3aa67"
+ let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+ axios(apiURL).then(displayForecast);
+
+}
+
+
+function displayForecast(response) {
+  console.log(response.data);
+
 
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
@@ -83,6 +95,7 @@ function displayForecast() {
 `;
   });
 
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
@@ -90,4 +103,5 @@ let searchFieldElement = document.querySelector("#search-form");
 searchFieldElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Cork");
+
 displayForecast();
