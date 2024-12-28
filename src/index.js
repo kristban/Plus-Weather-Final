@@ -11,7 +11,6 @@ function updateWeather(response) {
 
   let iconElement = document.querySelector("#icon");
 
-  
   temperatureElement.innerHTML = Math.round(temperature);
   cityElement.innerHTML = response.data.city;
   conditionElement.innerHTML = response.data.condition.description;
@@ -19,7 +18,6 @@ function updateWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
-  
 }
 
 function formatDate(date) {
@@ -62,8 +60,34 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml = 
+    forecastHtml +
+    `
+      <div class="weather-forecast-day">
+        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature">
+            <strong>15º</strong>
+          </div>
+          <div class="weather-forecast-temperature">9º</div>
+        </div>
+      </div>
+`;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFieldElement = document.querySelector("#search-form");
 searchFieldElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Cork");
-
+displayForecast();
